@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@2.0.3
+jobs:
+  sayHello:
+    docker:
+      - image: circleci/aws-cli@2.0.3
+    steps:
+      - checkout
+      - run: echo "hello world"
+workflows:
+  myWorkflow:
+    jobs:
+      - sayHello
