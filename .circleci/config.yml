@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-  aws-cli: circleci/aws-cli@2.0.3
+  aws-cli: circleci/aws-cli@3.1.1
 jobs:
   sayHello:
     docker:
-      - image: circleci/aws-cli@2.0.3
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - run: echo "hello world"
